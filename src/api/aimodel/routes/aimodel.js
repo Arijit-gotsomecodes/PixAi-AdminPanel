@@ -1,13 +1,16 @@
-// src/api/aimodel/routes/aimodel.js
+'use strict';
+
 module.exports = {
-    routes: [
-      {
-        method: 'POST',
-        path: '/aimodel',
-        handler: 'aimodel.generateImage',
-        config: {
-          auth: false, // Set to true if you want to require authentication
-        }
-      }
-    ]
-  };
+  routes: [
+    {
+      method: 'POST',
+      path: '/aimodel',
+      handler: 'aimodel.generateImage',
+      config: {
+        policies: [],
+        middlewares: [],
+        auth: false,
+      },
+    },
+  ],
+};
